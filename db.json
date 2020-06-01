@@ -1,0 +1,93 @@
+{
+  "skills": [
+    {
+      "id": 0,
+      "skill": "JavaScript + ES6"
+    },
+    {
+      "id": 1,
+      "skill": "AJAX (XMLHttpRequest, Fetch, axios)"
+    },
+    {
+      "id": 2,
+      "skill": "jQuery"
+    },
+    {
+      "id": 3,
+      "skill": "React.js"
+    },
+    {
+      "id": 4,
+      "skill": "Redux"
+    },
+    {
+      "id": 5,
+      "skill": "HTML"
+    },
+    {
+      "id": 6,
+      "skill": "CSS"
+    },
+    {
+      "id": 7,
+      "skill": "CSS"
+    },
+    {
+      "id": 8,
+      "skill": "Git "
+    }
+  ],
+  "other_skills": [
+    {
+      "id": 0,
+      "skill": "NodeJS(Koa)"
+    },
+    {
+      "id": 1,
+      "skill": "OOP"
+    },
+    {
+      "id": 2,
+      "skill": "MVC"
+    },
+    {
+      "id": 3,
+      "skill": "SQL (MySQL)"
+    },
+    {
+      "id": 4,
+      "skill": "SQL (MySQL)"
+    },
+    {
+      "id": 5,
+      "skill": "Gulp/ Webpack"
+    }
+  ],
+  "languages": ["English:Pre-intermediate"],
+  "courses": [
+    {
+      "id": 0,
+      "course": "JS intensive course with the Kharkiv company (NDA)"
+    },
+    {
+      "id": 1,
+      "course": "Private tutor, JavaScript advanced course"
+    },
+    {
+      "id": 2,
+      "course": "Private tutor, JavaScript advanced course"
+    },
+    {
+      "id": 3,
+      "course": "Private tutor  - JavaScript basic course"
+    },
+    {
+      "id": 4,
+      "course": "Computer courses “Basic” -  JavaScript basic course"
+    },
+    {
+      "id": 5,
+      "course": "Computer courses “Basic”  - HTML5, CSS3 basic course"
+    }
+  ]
+}

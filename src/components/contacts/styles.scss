@@ -1,0 +1,17 @@
+@import "styles/variables.scss";
+
+.contacts {
+  //border: 1px solid red;
+  color: $courses__fonts__color;
+  position: absolute;
+  top: 50vh;
+  left: 30px;
+  list-style: disc;
+  font-size: $base__font-size$contacts_fonts;
+  font-family: $base__font-family;
+}
+
+.contact-title {
+  color:  $second__color;
+  margin-right: 10px;
+}

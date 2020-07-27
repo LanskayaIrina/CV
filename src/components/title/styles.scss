@@ -1,0 +1,25 @@
+@import "styles/variables.scss";
+
+// .title-container {
+//   display: none;
+// }
+
+.title {
+  color: $base__color;
+  text-align: end;
+  right: 50px;
+  position: absolute;
+  font-size: $title__font-size;
+  font-family: $title__font-family;
+  text-shadow: $second__color 1px 1px 1px;
+}
+
+.sub-title {
+  color: $second__color;
+  font-size: $profesion__title__font-size;
+  top: 67px;
+  right: 50px;
+  position: absolute;
+  font-family: $title__font-family;
+  text-shadow: $base__color 1px 1px 2px;
+}

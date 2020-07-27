@@ -1,8 +1,10 @@
 {
-  "name": "cv-ira-lanskaia",
+  "name": "cv-ira-lanskaya",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "^4.10.2",
+    "@material-ui/icons": "^4.9.1",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
@@ -19,12 +21,13 @@
     "react-redux": "^7.2.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
+    "react-tagcloud": "^2.0.0",
     "redux": "^4.0.5",
     "redux-devtools-extension": "^2.13.8",
     "redux-thunk": "^2.3.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "concurrently \"react-scripts start\" \"json-server --watch db.json --port 3001\" ",
     "api": "json-server --watch db.json --port 3001",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -47,9 +50,9 @@
       "last 1 safari version"
     ]
   },
- 
   "devDependencies": {
     "babel-plugin-module-resolver": "^4.0.0",
+    "concurrently": "^5.2.0",
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.1.0",
     "eslint-plugin-import": "^2.21.1",

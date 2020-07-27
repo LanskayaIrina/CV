@@ -1,1 +1,302 @@
+@import "styles/variables.scss";
 
+.skills-container {
+  position: absolute;
+  width: 265px;
+  height: 248px;
+  top: 320px;
+  right: -25px;
+  animation: appearSkillsStikers 3s linear;
+
+  @media (min-width: 505px) {
+    right: -20px;
+  }
+
+  @media (min-width: 540px) {
+    right: -11px;
+  }
+
+  @media (min-width: 585px) {
+    right: 2px;
+  }
+
+  @media (min-width: 630px) {
+    right: 27px;
+  }
+
+  @media (min-width: 670px) {
+    right: 45px;
+  }
+
+  @media (min-width: 730px) {
+    right: 79px;
+  }
+
+  @media (min-width: 785px) {
+    right: 110px;
+  }
+
+  @media (min-width: 865px) {
+    right: 134px;
+  }
+
+  @media (min-width: 920px) {
+    right: 154px;
+  }
+}
+
+.js,
+.html,
+.react,
+.css,
+.other {
+  position: absolute;
+  top: 19px;
+  left: 10px;
+  width: 65px;
+  height: 75px;
+  transition: 2s;
+  animation: blick 4s linear infinite;
+  animation-delay: 4s;
+  //opacity: 0.7;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.4, 1.4);
+    opacity: 1;
+    animation: none;
+  }
+}
+
+.css {
+  width: 45px;
+  height: 60px;
+  top: 5px;
+  left: 180px;
+  animation-delay: 2s;
+}
+
+.react {
+  width: 70px;
+  height: 85px;
+  top: 108px;
+  left: 122px;
+  animation: blickReact 4s linear infinite;
+  animation-delay: 2s;
+  opacity: 1;
+
+  @media (min-width: 529px) {
+    left: 113px;
+  }
+
+  @media (min-width: 564px) {
+    left: 103px;
+  }
+
+  @media (min-width: 610px) {
+    left: 95px;
+  }
+
+  @media (min-width: 628px) {
+    left: 87px;
+  }
+
+  @media (min-width: 629px) {
+    left: 106px;
+  }
+
+  @media (min-width: 652px) {
+    left: 93px;
+  }
+
+  @media (min-width: 667px) {
+    left: 102px;
+  }
+
+  @media (min-width: 700px) {
+    left: 90px;
+  }
+
+  @media (min-width: 720px) {
+    left: 77px;
+  }
+
+  @media (min-width: 729px) {
+    left: 106px;
+  }
+
+  @media (min-width: 760px) {
+    left: 96px;
+  }
+
+  @media (min-width: 777px) {
+    left: 87px;
+  }
+
+  @media (min-width: 787px) {
+    left: 112px;
+  }
+
+  @media (min-width: 807px) {
+    left: 99px;
+  }
+
+  @media (min-width: 834px) {
+    left: 87px;
+  }
+
+  @media (min-width: 857px) {
+    left: 76px;
+  }
+
+  @media (min-width: 865px) {
+    left: 96px;
+  }
+
+  @media (min-width: 888px) {
+    left: 82px;
+  }
+
+  @media (min-width: 919px) {
+    left: 96px;
+  }
+}
+
+.html {
+  width: 67px;
+  height: 77px;
+  top: 185px;
+  left: -5px;
+  animation-delay: 2500ms;
+  border-radius: 3px;
+}
+
+.other {
+  width: 44px;
+  height: 45px;
+  top: 174px;
+  left: 205px;
+  animation-delay: 1500ms;
+}
+
+.show-js-skill,
+.show-html-skill,
+.show-css-skill,
+.show-react-skill,
+.show-other-skill {
+  position: absolute;
+  top: 45px;
+  left: 10%;
+  color: $second__color;
+  font-size: $base__font-size;
+  font-family: $base__font-family;
+  letter-spacing: $letter-spacing;
+  animation: appearSkills 2s linear;
+
+  @media (min-width: 800px) {
+    left: 20%;
+  }
+}
+
+.show-html-skill {
+  top: 130px;
+  left: 37%;
+  width: 40px;
+
+  @media (min-width: 535px) {
+    left: 41%;
+  }
+
+  @media (min-width: 680px) {
+    left: 44%;
+    width: 180px;
+  }
+}
+
+.show-react-skill {
+  top: 45px;
+  left: 37%;
+
+  @media (min-width: 535px) {
+    left: 41%;
+  }
+
+  @media (min-width: 680px) {
+    left: 44%;
+    width: 180px;
+  }
+}
+
+.show-css-skill {
+  left: 64%;
+
+  @media (min-width: 535px) {
+    left: 68%;
+  }
+
+  @media (min-width: 680px) {
+    left: 78%;
+  }
+
+  @media (min-width: 800px) {
+    left: 74%;
+  }
+}
+
+.show-other-skill {
+  top: 132px;
+  left: 64%;
+
+  @media (min-width: 535px) {
+    left: 68%;
+  }
+  @media (min-width: 680px) {
+    left: 78%;
+  }
+
+  @media (min-width: 800px) {
+    left: 74%;
+  }
+}
+
+@keyframes appearSkillsStikers {
+  0% {
+    opacity: .5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes appearSkills {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes blick {
+  0% {
+    opacity: .3;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: .3;
+  }
+}
+
+@keyframes blickReact {
+  0% {
+    opacity: .7;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: .7;
+  }
+}

@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { object, func, arrayOf } from 'prop-types';
 
 import { ExpandMoreButton } from 'components/_shared/ExpandButton';
-import { changePage } from 'services/changePage';
+import { handleEvent } from 'services/handleEvent';
 import { COURSES } from 'constants/pathNames';
-import { Title } from '../title/Title';
+import { Header } from '../header/Header';
 import { jsSkillsArr, reactSkillsArr, htmlSkillsArr, otherSkillsArr, cssSkillsArr } from 'constants/infoArries';
 import photo from 'accets/Slide1.png';
 import html from 'accets/StickerHtml.png';
@@ -24,6 +24,7 @@ const makeLayout = (arr, className) => {
     </ul>
   );
 };
+
 const initialJsSkillsLayout = makeLayout(jsSkillsArr, 'show-js-skill');
 const initialReactSkillsLayout = makeLayout(reactSkillsArr, 'show-react-skill');
 const initialHtmlSkillsLayout = makeLayout(htmlSkillsArr, 'show-html-skill');
@@ -73,12 +74,6 @@ export const Skills = ({ match, history, getSkills, skills }) => {
     isOtherSkill = otherSkillsLayout || initialOtherSkillsLayout;
   }
 
-  const handleEvent = (e) => {
-    const delta = e;
-
-    changePage(match, history, historyPushDown, historyPushUp, delta);
-  };
-
   const showHtmlSkill = () => {
     setHtmlSkill(!htmlSkill);
   };
@@ -105,25 +100,27 @@ export const Skills = ({ match, history, getSkills, skills }) => {
   }, []);
 
   return (
-    <div className="container" onWheel={(e) => handleEvent(e.deltaY)}>
-      {!reactSkill && !isCssSkill && <Title />}
-      <img className="main-picture" src={photo} alt="ira" />
-      <div className="skills-container">
-        <img src={html} className="html" onClick={showHtmlSkill} alt="logo" />
-        <img src={react} className="react" onClick={showReactSkill} alt="logo" />
-        <img src={js} className="js" onClick={showJsSkill} alt="logo" />
-        <img src={css} className="css" onClick={showCssSkill} alt="logo" />
-        <img src={other} className="other" onClick={showOtherSkill} alt="logo" />
+    <>
+      <div id="12" className="container" onWheel={(e) => handleEvent(e.deltaY, match, history, historyPushDown, historyPushUp)}>
+        {!reactSkill && !isCssSkill && <Header titleName="Skills" />}
+        <img className="main-picture" src={photo} alt="ira" />
+        <div className="skills-container">
+          <img src={html} className="html" onClick={showHtmlSkill} alt="logo" />
+          <img src={react} className="react" onClick={showReactSkill} alt="logo" />
+          <img src={js} className="js" onClick={showJsSkill} alt="logo" />
+          <img src={css} className="css" onClick={showCssSkill} alt="logo" />
+          <img src={other} className="other" onClick={showOtherSkill} alt="logo" />
+        </div>
+        <div className="expand-more">
+          <ExpandMoreButton onClick={() => handleEvent(1.1, match, history, historyPushDown, historyPushUp)} />
+        </div>
+        {isJsSkill}
+        {isReactSkill}
+        {isHtmlSkill}
+        {isCssSkill}
+        {isOtherSkill}
       </div>
-      <div className="expand-more">
-        <ExpandMoreButton onClick={handleEvent} />
-      </div>
-      {isJsSkill}
-      {isReactSkill}
-      {isHtmlSkill}
-      {isCssSkill}
-      {isOtherSkill}
-    </div>
+    </>
   );
 };
 

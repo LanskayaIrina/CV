@@ -1,17 +1,42 @@
 @import "styles/variables.scss";
 
-.contacts {
-  //border: 1px solid red;
-  color: $courses__fonts__color;
+.contacts-info {
   position: absolute;
   top: 50vh;
   left: 30px;
   list-style: disc;
-  font-size: $base__font-size$contacts_fonts;
+  font-size: $base__font-size;
   font-family: $base__font-family;
+  animation: appearContacts 5s ease-in;
+  animation-fill-mode: appearContacts;
+  //animation: appearContacts 2s ease appearContacts;
+}
+
+.contacts-titles {
+  display: flex;
+  flex-direction: row;
+}
+
+.big-title-fontSize {
+  font-size: $profesion__title__font-size;
 }
 
 .contact-title {
   color:  $second__color;
   margin-right: 10px;
+  font-family: $base__font-family;
+}
+
+.contact-info {
+  color: $courses__fonts__color;
+  font-family: $base__font-family;
+}
+
+@keyframes appearContacts {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
 }

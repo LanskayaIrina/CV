@@ -5,6 +5,7 @@ import { Provider } from 'react-redux';
 import { store } from 'redux/store';
 import { App } from 'App';
 import 'general.scss';
+import './canselEvent';
 
 ReactDOM.render(
   <Provider store={store}>

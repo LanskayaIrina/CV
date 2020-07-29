@@ -1,0 +1,19 @@
+@import "styles/variables.scss";
+
+.header-container {
+  position: absolute;
+  top: 0;
+  right:-30px;
+  z-index: 20;
+}
+
+
+.flag {
+  position: absolute;
+  top: 101px;
+  right: -37px;
+  //width: 180px;
+  border: 30px solid $courses__fonts__color;
+  //border-top: 27px;
+  border-bottom: 20px solid transparent;
+}

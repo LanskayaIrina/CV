@@ -6,6 +6,7 @@ import Skills from 'components/skills';
 import Courses from 'components/courses';
 import { Interests } from 'components/interests';
 import { Contacts } from 'components/contacts';
+import { FormDialog } from 'components/formDialog';
 
 export const AppRouter = () => {
   return (
@@ -16,7 +17,8 @@ export const AppRouter = () => {
       <Route path={SKILLS} component={Skills} />
       <Route path={COURSES} component={Courses} />
       <Route path={INTERESTS} component={Interests} />
-      <Route path={CONTACTS} component={Contacts} />
+      <Route exact path={CONTACTS} component={Contacts} />
+      <Route exact path={`${CONTACTS}/:email`} component={FormDialog} />
     </Switch>
   );
 };

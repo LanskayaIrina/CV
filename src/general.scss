@@ -1,6 +1,10 @@
 @import "~normalize.css";
 @import "./styles/main.scss";
 
+body {
+
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -20,17 +24,26 @@ ul {
 }
 
 .App {
-  background-image: url('./accets/background.png');;
+  background-image: url("./accets/background.png");
+  overflow: hidden;
 }
 
 .container {
   max-width: 900px;
-  min-width: 400px;
+  // min-width: 400px;
   height: 99.5vh;
   margin: 0 auto;
   position: relative;
-  overflow: hidden;
-  //border: 1px solid white;
+  border: 1px solid white;
+  //overflow: hidden;
+  // -moz-transform: scale(0.8, 0.8); /* Moz-browsers */
+  // zoom: 0.8; /* Other non-webkit browsers */
+  // zoom: 80%; /* Webkit browsers */
+}
+
+.container-last {
+  width: 100%;
+  height: 98vh;
 }
 
 .main-picture {
@@ -39,6 +52,8 @@ ul {
   display: block;
   margin: auto;
   object-fit: cover;
+  //object-fit: scale-down;
+  object-position: center bottom;
 }
 
 .expand-more {
@@ -51,7 +66,7 @@ ul {
 
 .expand-less {
   position: absolute;
-  top: 30px;
+  top: 125px;
   right: 10px;
   z-index: 25;
   cursor: pointer;

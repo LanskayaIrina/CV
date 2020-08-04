@@ -1,49 +1,22 @@
 @import "styles/variables.scss";
 
-.cup,
-.book,
-.pen {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
 .second-slide-first-picture {
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
   animation: disAppear2S1Img 4s linear;
-  z-index: 13;
+  z-index: 24;
 }
 
 .second-slide-second-picture {
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
   animation: appear2S2Img 3s linear;
-  z-index: 15;
+  z-index: 24;
 }
 
-.cup-container {
+.cup-img-container {
   position: absolute;
   left: 35%;
   height: 100px;
   width: 100px;
   animation: cupUp 2s ease-in;
-  animation-delay: 1s;
+  //animation-delay: 1s;
   animation-fill-mode: forwards;
 
   @media (min-width: 552px) {
@@ -77,20 +50,90 @@
   @media (min-width: 868px) {
     left: 41%;
   }
+
+  @media (min-width: 934px) {
+    left: 42%;
+  }
+
+  @media (min-width: 1068px) {
+    left: 43%;
+  }
+
+  @media (min-width: 1204px) {
+    left: 44%;
+  }
+
+  @media (min-width: 1204px) {
+    left: 44%;
+  }
+
+  @media (min-width: 1280px) {
+    left: 41.5%;
+    width: 146px;
+    height: 110px;
+  }
+
+  @media (min-width: 1300px) {
+    left: 42%;
+  }
+
+  @media (min-width: 1315px) {
+    animation: cupUp1315px 2s ease-in;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+  }
+
+  @media (min-width: 1365px) {
+    height: 125px;
+    animation: cupUp1365px 2s ease-in;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+  }
+
+  @media (min-width: 1400px) {
+    animation: cupUp1400px 2s ease-in;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+  }
+
+  @media (min-width: 1435px) {
+    height: 134px;
+    animation: cupUp1435px 2s ease-in;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+  }
+
+  @media (min-width: 1480px) {
+    animation: cupUp1480px 2s ease-in;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+  }
+
+  @media (min-width: 1510px) {
+    width: 158px;
+    animation: cupUp1510px 2s ease-in;
+    animation-fill-mode: forwards;
+  }
+
+  @media (min-width: 1550px) {
+    animation: cupUp1550px 2s ease-in;
+    animation-fill-mode: forwards;
+  }
 }
 
-.book-container {
+.book-img-container {
   position: absolute;
   right: -9%;
   height: 245px;
   width: 221px;
-  animation: bookUp 4s linear;
-  animation-delay: 1s;
+  animation: bookUp 3s linear;
+  //animation-delay: 1s;
   animation-fill-mode: forwards;
 
   @media (min-width: 517px) {
     right: -6%;
   }
+
   @media (min-width: 528px) {
     right: -5%;
   }
@@ -132,15 +175,19 @@
   }
 
   @media (min-width: 748px) {
-    right: 11%;
+    right: 12%;
   }
 
   @media (min-width: 777px) {
     right: 13%;
   }
 
-  @media (min-width: 803px) {
+  @media (min-width: 890px) {
     right: 14%;
+  }
+
+  @media (min-width: 803px) {
+    right: 15%;
   }
 
   @media (min-width: 833px) {
@@ -148,90 +195,279 @@
   }
 
   @media (min-width: 868px) {
-    right: 17%;
+    right: 18%;
   }
 
   @media (min-width: 902px) {
-    right: 18%;
+    right: 19%;
+  }
+
+  @media (min-width: 935px) {
+    right: 20%;
+  }
+
+  @media (min-width: 975px) {
+    right: 21%;
+  }
+
+  @media (min-width: 1015px) {
+    right: 22%;
+  }
+
+  @media (min-width: 1062px) {
+    right: 23%;
+  }
+
+  @media (min-width: 1110px) {
+    right: 24%;
+  }
+
+  @media (min-width: 1125px) {
+    right: 277px;
+  }
+
+  @media (min-width: 1150px) {
+    right: 291px;
+  }
+
+  @media (min-width: 1170px) {
+    right: 305px;
+  }
+
+  @media (min-width: 1200px) {
+    right: 319px;
+  }
+
+  @media (min-width: 1215px) {
+    right: 326px;
+  }
+
+  @media (min-width: 1238px) {
+    right: 336px;
+  }
+
+  @media (min-width: 1280px) {
+    right: 344px;
+    animation: bookUp1280px 4s linear;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+  }
+
+  @media (min-width: 1310px) {
+    right: 356px;
+    animation: bookUp1310px 4s linear;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+  }
+
+  @media (min-width: 1340px) {
+    right: 362px;
+    height: 254px;
+    width: 235px;
+  }
+
+  @media (min-width: 1350px) {
+    animation: bookUp1350px 4s linear;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+  }
+
+  @media (min-width: 1390px) {
+    right: 366px;
+    height: 275px;
+    width: 275px;
+    animation: bookUp1390px 4s linear;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+  }
+
+  @media (min-width: 1420px) {
+    right: 375px;
+    height: 292px;
+    width: 292px;
+    animation: bookUp1420px 4s linear;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+  }
+
+  @media (min-width: 1455px) {
+    animation: bookUp1455px 4s linear;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+  }
+
+  @media (min-width: 1500px) {
+    animation: bookUp1500px 4s linear;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+  }
+
+  @media (min-width: 1540px) {
+    right: 394px;
+    height: 300px;
+    width: 300px;
+    animation: bookUp1540px 4s linear;
+    animation-fill-mode: forwards;
   }
 }
 
-.pen-container {
+.pen-img-container {
   position: absolute;
-  left: 3%;
   left: 12px;
-  height: 58px;
+  height: 62px;
   width: 90px;
   animation: penUp 2s ease-in;
   animation-delay: 1s;
   animation-fill-mode: forwards;
 
   @media (min-width: 517px) {
-    left: 21px;
+    left: 4%;
   }
 
   @media (min-width: 528px) {
-    left: 35px;
+    left: 5%;
   }
 
   @media (min-width: 558px) {
-    left: 42px;
+    left: 6%;
   }
 
   @media (min-width: 570px) {
-    left: 50px;
+    left: 7%;
   }
 
   @media (min-width: 589px) {
-    left: 60px;
+    left: 9%;
   }
 
   @media (min-width: 610px) {
-    left: 72px;
+    left: 11%;
   }
 
   @media (min-width: 638px) {
-    left: 85px;
+    left: 13%;
   }
 
   @media (min-width: 667px) {
-    left: 100px;
-  }
-
-  @media (min-width: 693px) {
-    left: 114px;
+    left: 15%;
   }
 
   @media (min-width: 720px) {
-    left: 127px;
+    left: 17%;
   }
 
   @media (min-width: 748px) {
-    left: 140px;
+    left: 18%;
   }
 
   @media (min-width: 777px) {
-    left: 155px;
+    left: 19%;
   }
 
   @media (min-width: 803px) {
-    left: 170px;
+    left: 20%;
   }
 
   @media (min-width: 833px) {
-    left: 185px;
+    left: 21%;
   }
 
   @media (min-width: 868px) {
-    left: 203px;
+    left: 23%;
   }
 
   @media (min-width: 902px) {
-    left: 212px;
+    left: 24%;
+  }
+
+  @media (min-width: 923px) {
+    left: 25%;
+  }
+
+  @media (min-width: 985px) {
+    left: 26%;
+  }
+
+  @media (min-width: 1038px) {
+    left: 27%;
+  }
+
+  @media (min-width: 1079px) {
+    left: 28%;
+  }
+
+  @media (min-width: 1127px) {
+    left: 29%;
+  }
+
+  @media (min-width: 1179px) {
+    left: 30%;
+  }
+
+  @media (min-width: 1229px) {
+    left: 31%;
+  }
+
+  @media (min-width: 1260px) {
+    left: 31%;
+    animation: penUp1260px 2s ease-in;
+    animation-fill-mode: forwards;
+  }
+
+  @media (min-width: 1300px) {
+    left: 31%;
+    height: 70px;
+    width: 90px;
+    animation: penUp1300px 2s ease-in;
+    animation-fill-mode: forwards;
+  }
+
+  @media (min-width: 1300px) {
+    animation: penUp1330px 2s ease-in;
+    animation-fill-mode: forwards;
+  }
+
+  @media (min-width: 1380px) {
+    animation: penUp1380px 2s ease-in;
+    animation-fill-mode: forwards;
+  }
+
+  @media (min-width: 1420px) {
+    animation: penUp1420px 2s ease-in;
+    animation-fill-mode: forwards;
+  }
+
+  @media (min-width: 1465px) {
+    height: 78px;
+    animation: penUp1465px 2s ease-in;
+    animation-fill-mode: forwards;
+  }
+
+  @media (min-width: 1500px) {
+    animation: penUp1500px 2s ease-in;
+    animation-fill-mode: forwards;
+  }
+
+  @media (min-width: 1540px) {
+    animation: penUp1540px 2s ease-in;
+    animation-fill-mode: forwards;
   }
 }
 
-.courses {
+.cup-img,
+.book-img,
+.pen-img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.courses-list {
   position: absolute;
   font-size: $base__font-size;
   font-family: $base__font-family;
@@ -245,44 +481,57 @@
   list-style: disc;
   padding: 32px;
   padding-right: 0px;
-  background-color: rgba($color: #000000, $alpha: .9);
+  background-color: rgba($color: #000000, $alpha: 0.9);
   letter-spacing: $letter-spacing;
 
   @media (min-width: 650px) {
     width: 41%;
-    top: 213px; 
+    top: 213px;
     right: 5%;
   }
 }
 
-.tag-click {
+.tag-cloud-click {
   position: absolute;
   width: 100%;
-  z-index: 20;
+  z-index: 30;
   height: 25vh;
   cursor: pointer;
 }
 
-.tag-container {
+.tag-cloud-container {
   opacity: 0;
   position: absolute;
   top: 20px;
-  // left: 10%;
-  // width: 80%;
   left: 0%;
-  width: 73%;
-  animation: appearTags 3s linear;
+  width: 60%;
+  animation: appearTags 5s linear;
   animation-delay: 1s;
   animation-fill-mode: forwards;
+
+  @media (min-width: "700px") {
+    width: 66%;
+  }
+
+  @media (min-width: "800px") {
+    width: 74%;
+  }
+
+  @media (min-width: "1075px") {
+    width: 80%;
+  }
 }
 
-.tag {
+.tag-cloud {
   animation: blinker 2s ease;
 }
 
 @keyframes appearTags {
   0% {
     opacity: 0;
+  }
+  50%{
+    opacity: .3;
   }
   100% {
     opacity: 1;
@@ -309,19 +558,192 @@
   }
 }
 
+@keyframes cupUp1315px {
+  0% {
+    top: 750px;
+  }
+  100% {
+    top: 490px;
+  }
+}
+
+@keyframes cupUp1365px {
+  0% {
+    top: 750px;
+  }
+  100% {
+    top: 483px;
+  }
+}
+
+@keyframes cupUp1400px {
+  0% {
+    top: 750px;
+  }
+  100% {
+    top: 478px;
+  }
+}
+
+@keyframes cupUp1435px {
+  0% {
+    top: 750px;
+  }
+  100% {
+    top: 470px;
+  }
+}
+
+@keyframes cupUp1480px {
+  0% {
+    top: 750px;
+  }
+  100% {
+    top: 467px;
+  }
+}
+
+@keyframes cupUp1510px {
+  0% {
+    top: 750px;
+  }
+  100% {
+    top: 460px;
+  }
+}
+
+@keyframes cupUp1550px {
+  0% {
+    top: 750px;
+  }
+  100% {
+    top: 453px;
+  }
+}
+
 @keyframes bookUp {
   0% {
     top: 750px;
   }
   50% {
-    top: 281px;
+    top: 277px;
     opacity: 1;
   }
-  80%{
+  100% {
+    top: 277px;
     opacity: 0;
   }
+}
+
+@keyframes bookUp1280px {
+  0% {
+    top: 750px;
+  }
+  50% {
+    top: 260px;
+    opacity: 1;
+  }
   100% {
-    top: 281px;
+    top: 260px;
+    opacity: 0;
+  }
+}
+
+@keyframes bookUp1310px {
+  0% {
+    top: 750px;
+  }
+  50% {
+    top: 253px;
+    opacity: 1;
+  }
+ 
+  100% {
+    top: 253px;
+    opacity: 0;
+  }
+}
+
+@keyframes bookUp1350px {
+  0% {
+    top: 750px;
+  }
+  50% {
+    top: 240px;
+    opacity: 1;
+  }
+  100% {
+    top: 240px;
+    opacity: 0;
+  }
+}
+
+@keyframes bookUp1390px {
+  0% {
+    top: 750px;
+  }
+  50% {
+    top: 230px;
+    opacity: 1;
+  }
+  100% {
+    top: 230px;
+    opacity: 0;
+  }
+}
+
+@keyframes bookUp1420px {
+  0% {
+    top: 750px;
+  }
+  50% {
+    top: 215px;
+    opacity: 1;
+  }
+  100% {
+    top: 215px;
+    opacity: 0;
+  }
+}
+
+@keyframes bookUp1455px {
+  0% {
+    top: 750px;
+  }
+  50% {
+    top: 200px;
+    opacity: 1;
+  }
+  100% {
+    top: 200px;
+    opacity: 0;
+  }
+}
+
+@keyframes bookUp1500px {
+  0% {
+    top: 750px;
+  }
+  50% {
+    top: 185px;
+    opacity: 1;
+  }
+  100% {
+    top: 185px;
+    opacity: 0;
+  }
+}
+
+@keyframes bookUp1540px {
+  0% {
+    top: 750px;
+  }
+  50% {
+    top: 170px;
+    opacity: 1;
+  }
+  100% {
+    top: 170px;
     opacity: 0;
   }
 }
@@ -329,18 +751,81 @@
 @keyframes penUp {
   0% {
     top: 750px;
-    opacity: 1;
-  }
-  50% {
-    top: 650px;
-    opacity: 1;
-  }
-  95% {
-    opacity: 1;
   }
   100% {
-    top: 187px;
-    opacity: 1;
+    top: 194px;
+  }
+}
+
+@keyframes penUp1260px {
+  0% {
+    top: 750px;
+  }
+  100% {
+    top: 180px;
+  }
+}
+
+@keyframes penUp1300px {
+  0% {
+    top: 750px;
+  }
+  100% {
+    top: 165px;
+  }
+}
+
+@keyframes penUp1330px {
+  0% {
+    top: 750px;
+  }
+  100% {
+    top: 150px;
+  }
+}
+
+@keyframes penUp1380px {
+  0% {
+    top: 750px;
+  }
+  100% {
+    top: 135px;
+  }
+}
+
+@keyframes penUp1420px {
+  0% {
+    top: 750px;
+  }
+  100% {
+    top: 115px;
+  }
+}
+
+@keyframes penUp1465px {
+  0% {
+    top: 750px;
+  }
+  100% {
+    top: 98px;
+  }
+}
+
+@keyframes penUp1500px {
+  0% {
+    top: 750px;
+  }
+  100% {
+    top: 83px;
+  }
+}
+
+@keyframes penUp1540px {
+  0% {
+    top: 750px;
+  }
+  100% {
+    top: 70px;
   }
 }
 

@@ -2,14 +2,57 @@
 
 .contacts-info {
   position: absolute;
+  width: 390px;
   top: 50vh;
-  left: 30px;
+  left: -14px;
   list-style: disc;
   font-size: $base__font-size;
   font-family: $base__font-family;
-  animation: appearContacts 5s ease-in;
+  animation: appearContacts 2s ease-in;
   animation-fill-mode: appearContacts;
-  //animation: appearContacts 2s ease appearContacts;
+  background-color: rgba($color: #000000, $alpha: .9);
+
+  @media (min-width: 798px) {
+    background-color: transparent;
+    left: 0;
+  }
+
+  @media (min-width: 820px) {
+    left: 1%;
+  }
+
+  @media (min-width: 925px) {
+    left: 3%;
+  }
+
+  @media (min-width: 1000px) {
+    left: 6%;
+  }
+
+  @media (min-width: 1088px) {
+    left: 8%;
+  }
+
+  @media (min-width: 1150px) {
+    left: 10%;
+  }
+
+  @media (min-width: 1230px) {
+    left: 12%;
+  }
+
+  @media (min-width: 1320px) {
+    top: 46vh;
+  }
+
+  @media (min-width: 1400px) {
+    top: 44vh;
+  }
+
+  @media (min-width: 1400px) {
+    top: 42vh;
+    left: 15%;
+  }
 }
 
 .contacts-titles {
@@ -17,7 +60,7 @@
   flex-direction: row;
 }
 
-.big-title-fontSize {
+.contact-title-fontSize {
   font-size: $profesion__title__font-size;
 }
 
@@ -30,6 +73,11 @@
 .contact-info {
   color: $courses__fonts__color;
   font-family: $base__font-family;
+
+  &:hover {
+    text-shadow: 1px 1px 0 $second__color;
+    font-size: 20px;
+  }
 }
 
 @keyframes appearContacts {

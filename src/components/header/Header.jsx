@@ -5,11 +5,11 @@ import './styles.scss';
 
 export const Header = ({ titleName }) => {
   return (
-    <div className="header-container">
+    <header className="header-container">
       <div className="flag">
         <Title title={titleName} className="slide-name" />
       </div>
       <Title title="Irina Lanskaya" profession="JavaScript developer" className="title-container" />
-    </div>
+    </header>
   );
 };

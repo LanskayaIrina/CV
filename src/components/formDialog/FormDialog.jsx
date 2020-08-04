@@ -24,7 +24,7 @@ export const FormDialog = ({ open = true, closeDialog }) => {
       }
     },
     onSubmit: (val) => {
-      alert(JSON.stringify(val, null, 2));
+      //alert(JSON.stringify(val, null, 2));
       closeDialog(false);
     },
   });

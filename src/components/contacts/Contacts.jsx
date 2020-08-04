@@ -1,23 +1,21 @@
 import React, { useState } from 'react';
-// import { NavLink } from 'react-router-dom';
 import { object } from 'prop-types';
 import Typography from '@material-ui/core/Typography';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 
 import { FormDialog } from '../formDialog';
-import { Header } from '../header/Header';
+import { Header } from 'components/header/Header';
 import { ExpandLessButton } from 'components/_shared/ExpandButton';
 import { handleEvent } from 'services/handleEvent';
 import { INTERESTS } from 'constants/pathNames';
 import photo from 'accets/4.png';
 import './styles.scss';
 
-export const Contacts = ({ match, history, location }) => {
+export const Contacts = ({ match, history }) => {
   const [isDialogEmail, setIsDialogEmail] = useState(false);
   const [isContacts, setIsContacts] = useState(true);
-  const [isWorks, setIsWorks] = useState(false);
-  // const { pathname } = location;
+  const [isProjects, setIsProjects] = useState(false);
   const historyPushDown = '';
   const historyPushUp = INTERESTS;
 
@@ -27,11 +25,11 @@ export const Contacts = ({ match, history, location }) => {
 
   const showContacts = () => {
     setIsContacts(!isContacts);
-    setIsWorks(!isWorks);
+    setIsProjects(!isProjects);
   };
 
-  const showWorks = () => {
-    setIsWorks(!isWorks);
+  const showProjects = () => {
+    setIsProjects(!isProjects);
     setIsContacts(!isContacts);
   };
 
@@ -40,65 +38,67 @@ export const Contacts = ({ match, history, location }) => {
   };
 
   return (
-    <div className="container-last" onWheel={(e) => handleEvent(e.deltaY, match, history, historyPushDown, historyPushUp)}>
+    <div className="container" onWheel={(e) => handleEvent(e.deltaY, match, history, historyPushDown, historyPushUp)}>
       <Header titleName="Contacts" />
-      {isDialogEmail && <FormDialog open={isDialogEmail} closeDialog={setIsDialogEmail} />}
-      <img className="main-picture" src={photo} alt="ira" />
-
-      <div className="contacts-info">
-        <div className="contacts-titles">
-          <ListItem button onClick={showContacts}>
-            <Typography align="center">
-              <span className={isContacts ? 'contact-title big-title-fontSize' : 'contact-info big-title-fontSize'}>
-                Contacts
-              </span>
-            </Typography>
-          </ListItem>
-          <ListItem button onClick={showWorks}>
-            <Typography align="center">
-              <span className={isWorks ? 'contact-title big-title-fontSize' : 'contact-info big-title-fontSize'}>
-                Works
-              </span>
-            </Typography>
-          </ListItem>
+      <main>
+        {isDialogEmail && <FormDialog open={isDialogEmail} closeDialog={setIsDialogEmail} />}
+        <div className="img-container">
+          <img className="main-img" src={photo} alt="ira" />
         </div>
-        {isContacts && (
-          <List component="nav">
-            <ListItem button>
-              <span className="contact-title">Phone</span>
-              <span className="contact-info">0660376766</span>
+        <div className="contacts-info">
+          <div className="contacts-titles">
+            <ListItem button onClick={showContacts}>
+              <Typography align="center">
+                <span
+                  className={
+                    isContacts ? 'contact-title contact-title-fontSize' : 'contact-info contact-title-fontSize'
+                  }
+                >
+                  Contacts
+                </span>
+              </Typography>
             </ListItem>
-            {/* <li>
-            <NavLink to={`${pathname}/email`}>
-              <span className="contact-title">Email</span>0376766@gmail
-            </NavLink>
-          </li> */}
-            <ListItem button onClick={() => openDialogEmail()}>
-              <span className="contact-title">Email</span>
-              <span className="contact-info">0376766@gmail.com</span>
+            <ListItem button onClick={showProjects}>
+              <Typography align="center">
+                <span className={isProjects ? 'contact-title big-title-fontSize' : 'contact-info big-title-fontSize'}>
+                  Projects
+                </span>
+              </Typography>
             </ListItem>
-            <ListItemLink href="https://github.com/LanskayaIrina" target="_blank">
-              <span className="contact-title">Git</span>
-              <span className="contact-info">github.com/LanskayaIrina</span>
-            </ListItemLink>
-            <ListItemLink href="https://linkedin.com/in/irina-lanskaya/" target="_blank">
-              <span className="contact-title">LinkedIn</span>
-              <span className="contact-info">linkedin.com/in/irina-lanskaya/</span>
-            </ListItemLink>
-          </List>
-        )}
-        {isWorks && (
-          <List component="nav">
-            <ListItemLink href="https://lanskayairina.github.io/Movies/" target="_blank">
-              <span className="contact-title">Movies</span>
-              <span className="contact-info">https://lanskayairina.github.io/Movies/</span>
-            </ListItemLink>
-          </List>
-        )}
-      </div>
-      <div className="expand-less">
-        <ExpandLessButton onClick={() => handleEvent(0, match, history, historyPushDown, historyPushUp)} />
-      </div>
+          </div>
+          {isContacts && (
+            <List component="nav">
+              <ListItem button>
+                <span className="contact-title">Phone</span>
+                <span className="contact-info">066 037 67 66</span>
+              </ListItem>
+              <ListItem button onClick={() => openDialogEmail()}>
+                <span className="contact-title">Email</span>
+                <span className="contact-info">0376766@gmail.com</span>
+              </ListItem>
+              <ListItemLink href="https://github.com/LanskayaIrina" target="_blank">
+                <span className="contact-title">Git</span>
+                <span className="contact-info">github.com/LanskayaIrina</span>
+              </ListItemLink>
+              <ListItemLink href="https://linkedin.com/in/irina-lanskaya/" target="_blank">
+                <span className="contact-title">LinkedIn</span>
+                <span className="contact-info">linkedin.com/in/irina-lanskaya/</span>
+              </ListItemLink>
+            </List>
+          )}
+          {isProjects && (
+            <List component="nav">
+              <ListItemLink href="https://lanskayairina.github.io/Movies/" target="_blank">
+                <span className="contact-title">Movies</span>
+                <span className="contact-info">https://lanskayairina.github.io/Movies/</span>
+              </ListItemLink>
+            </List>
+          )}
+        </div>
+        <div className="btn-expand-less">
+          <ExpandLessButton onClick={() => handleEvent(0, match, history, historyPushDown, historyPushUp)} />
+        </div>
+      </main>
     </div>
   );
 };

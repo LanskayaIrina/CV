@@ -23,7 +23,7 @@ export const reactSkillsArr = [
 export const htmlSkillsArr = [
   {
     id: 4,
-    skill: 'HTML',
+    skill: 'HTML 5',
   },
   {
     id: 5,
@@ -57,7 +57,7 @@ export const otherSkillsArr = [
   },
 ];
 
-export const initialCourses = [
+export const initialCoursesList = [
   {
     title: 'JS intensive course with the Kharkiv company (NDA)',
     id: 0,

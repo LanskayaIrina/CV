@@ -25,6 +25,29 @@ ul {
   @media (min-width: "500px") {
     display: block;
     background: center / cover no-repeat url("./accets/background.png");
-    //height: 100vh;
+  }
+
+  @media (min-height: 724px) {
+    padding-top: 10px;
+  }
+
+  @media (min-height: 744px) {
+    padding-top: 20px;
+  }
+
+  @media (min-height: 770px) {
+    padding-top: 33px;
+  }
+
+  @media (min-height: 800px) {
+    padding-top: 48px;
+  }
+
+  @media (min-height: 850px) {
+    padding-top: 73px;
+  }
+
+  @media (min-height: 900px) {
+    padding-top: 98px;
   }
 }

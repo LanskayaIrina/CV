@@ -59,7 +59,7 @@ export const otherSkillsArr = [
 
 export const initialCoursesList = [
   {
-    title: 'JS intensive course with the Kharkiv company (NDA)',
+    title: 'JS intensive course in Kharkiv company (NDA)',
     id: 0,
   },
   {

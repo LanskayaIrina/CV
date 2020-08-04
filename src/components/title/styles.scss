@@ -15,10 +15,6 @@
   font-size: $main__title__font-size;
   font-family: $title__font-family;
   text-shadow: $second__color 1px 1px 1px;
-
-  .slide-name & {
-    font-size: $title__slide__font-size;
-  }
 }
 
 .sub-title {
@@ -28,10 +24,4 @@
   text-align: end;
   font-family: $title__font-family;
   text-shadow: $base__color 1px 1px 2px;
-}
-
-.slide-name {
-  position: absolute;
-  top: -21px;
-  left: -26px;
 }

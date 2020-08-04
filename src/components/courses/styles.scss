@@ -485,9 +485,9 @@
   letter-spacing: $letter-spacing;
 
   @media (min-width: 650px) {
-    width: 41%;
+    width: 37%;
     top: 213px;
-    right: 5%;
+    //right: 10%;
   }
 }
 
@@ -627,6 +627,9 @@
   }
   50% {
     top: 277px;
+    //opacity: 1;
+  }
+  98% {
     opacity: 1;
   }
   100% {
@@ -700,6 +703,9 @@
     top: 215px;
     opacity: 1;
   }
+  98% {
+    opacity: 1;
+  }
   100% {
     top: 215px;
     opacity: 0;
@@ -712,6 +718,9 @@
   }
   50% {
     top: 200px;
+    opacity: 1;
+  }
+  98% {
     opacity: 1;
   }
   100% {
@@ -728,6 +737,9 @@
     top: 185px;
     opacity: 1;
   }
+  98% {
+    opacity: 1;
+  }
   100% {
     top: 185px;
     opacity: 0;
@@ -740,6 +752,9 @@
   }
   50% {
     top: 170px;
+    opacity: 1;
+  }
+  98% {
     opacity: 1;
   }
   100% {

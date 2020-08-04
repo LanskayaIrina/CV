@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { object, func, arrayOf } from 'prop-types';
+import React, { useState } from 'react';
+import { object, arrayOf } from 'prop-types';
 
 import { ExpandMoreButton } from 'components/_shared/ExpandButton';
 import { handleEvent } from 'services/handleEvent';
@@ -33,7 +33,7 @@ const initialHtmlSkillsListLayout = makeLayout(htmlSkillsArr, 'html-skill');
 const initialCssSkillsListLayout = makeLayout(cssSkillsArr, 'css-skill');
 const initialOtherSkillsListLayout = makeLayout(otherSkillsArr, 'other-skill');
 
-export const Skills = ({ match, history, getSkills, skills }) => {
+export const Skills = ({ match, history, skills }) => {
   const [htmlSkillList, setHtmlSkillList] = useState(false);
   const [cssSkillList, setCssSkillList] = useState(false);
   const [jsSkillList, setJsSkillList] = useState(false);
@@ -96,15 +96,9 @@ export const Skills = ({ match, history, getSkills, skills }) => {
     setOtherSkillList(!otherSkillList);
   };
 
-  useEffect(() => {
-    getSkills();
-
-    // eslint-disable-next-line
-  }, []);
-
   return (
     <div className="container" onWheel={(e) => handleEvent(e.deltaY, match, history, historyPushDown, historyPushUp)}>
-      {!reactSkillList && !isCssSkillList && <Header titleName="Skills" />}
+      {!reactSkillList && !isCssSkillList && !isOtherSkillList && <Header titleName="Skills" />}
       <main>
         <div className="img-container">
           <img className="main-img" src={photo} alt="ira" />
@@ -132,6 +126,5 @@ export const Skills = ({ match, history, getSkills, skills }) => {
 Skills.propTypes = {
   match: object.isRequired,
   history: object.isRequired,
-  getSkills: func.isRequired,
   skills: arrayOf(object),
 };

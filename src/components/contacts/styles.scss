@@ -3,12 +3,12 @@
 .contacts-info {
   position: absolute;
   width: 390px;
-  top: 50vh;
+  top: 355px;
   left: -14px;
   list-style: disc;
   font-size: $base__font-size;
   font-family: $base__font-family;
-  animation: appearContacts 2s ease-in;
+  animation: appearContacts 1s ease-in;
   animation-fill-mode: appearContacts;
   background-color: rgba($color: #000000, $alpha: .9);
 
@@ -42,15 +42,11 @@
   }
 
   @media (min-width: 1320px) {
-    top: 46vh;
+    top: 330px;
   }
 
   @media (min-width: 1400px) {
-    top: 44vh;
-  }
-
-  @media (min-width: 1400px) {
-    top: 42vh;
+    top: 283px;
     left: 15%;
   }
 }

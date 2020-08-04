@@ -18,7 +18,7 @@ export const Interests = ({ match, history }) => {
 
   return (
     <div className="container" onWheel={(e) => handleEvent(e.deltaY, match, history, historyPushDown, historyPushUp)}>
-      <Header titleName="Interests" />
+      <Header />
       <main>
         <section className="third-slide-first-picture img-container">
           <img className="main-img" src={photo} alt="ira" />

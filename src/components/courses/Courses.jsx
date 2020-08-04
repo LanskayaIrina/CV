@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { TagCloud } from 'react-tagcloud';
-import { object, func, arrayOf } from 'prop-types';
+import { object, arrayOf } from 'prop-types';
 
 import { ExpandMoreButton } from 'components/_shared/ExpandButton';
 import { ExpandLessButton } from 'components/_shared/ExpandButton';
@@ -76,8 +76,6 @@ export const Courses = ({ match, history, courses, getCourses }) => {
   };
 
   useEffect(() => {
-    getCourses();
-
     setTimeout(() => {
       setIsTagCloud(true);
     }, 1000);
@@ -104,7 +102,7 @@ export const Courses = ({ match, history, courses, getCourses }) => {
 
   return (
     <div className="container" onWheel={(e) => handleEvent(e.deltaY, match, history, historyPushDown, historyPushUp)}>
-      <Header titleName="Courses" />
+      <Header />
       <main>
         <section className="second-slide-first-picture img-container">
           <img className="main-img" src={photo} alt="ira" />
@@ -143,5 +141,4 @@ Courses.propTypes = {
   match: object.isRequired,
   history: object.isRequired,
   courses: arrayOf(object),
-  getCourses: func.isRequired,
 };

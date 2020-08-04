@@ -1,1 +1,350 @@
+@import "styles/variables.scss";
 
+.skills-container {
+  position: absolute;
+  width: 265px;
+  height: 248px;
+  top: 320px;
+  right: -25px;
+
+  animation: appearSkillsStikers 3s linear;
+
+  @media (min-width: 505px) {
+    right: -20px;
+  }
+
+  @media (min-width: 540px) {
+    right: -11px;
+  }
+
+  @media (min-width: 557px) {
+    right: 2px;
+  }
+
+  @media (min-width: 577px) {
+    right: 13px;
+  }
+
+  @media (min-width: 597px) {
+    right: 27px;
+  }
+
+  @media (min-width: 627px) {
+    right: 40px;
+  }
+
+  @media (min-width: 653px) {
+    right: 51px;
+  }
+
+  @media (min-width: 677px) {
+    right: 67px;
+  }
+
+  @media (min-width: 717px) {
+    right: 87px;
+  }
+
+  @media (min-width: 753px) {
+    right: 106px;
+  }
+
+  @media (min-width: 790px) {
+    right: 123px;
+  }
+
+  @media (min-width: 823px) {
+    right: 140px;
+  }
+
+  @media (min-width: 859px) {
+    right: 160px;
+  }
+
+  @media (min-width: 900px) {
+    right: 178px;
+  }
+
+  @media (min-width: 920px) {
+    right: 190px;
+  }
+
+  @media (min-width: 960px) {
+    right: 210px;
+  }
+
+  @media (min-width: 998px) {
+    right: 230px;
+  }
+
+  @media (min-width: 1032px) {
+    right: 246px;
+  }
+
+  @media (min-width: 1084px) {
+    right: 272px;
+  }
+
+  @media (min-width: 1120px) {
+    right: 272px;
+  }
+
+  @media (min-width: 1155px) {
+    right: 307px;
+  }
+
+  @media (min-width: 1190px) {
+    right: 325px;
+  }
+
+  @media (min-width: 1230px) {
+    right: 346px;
+  }
+
+  @media (min-width: 1270px) {
+    right: 366px;
+  }
+
+  @media (min-width: 1310px) {
+    right: 373px;
+    top: 309px;
+  }
+
+  @media (min-width: 1345px) {
+    right: 376px;
+    top: 298px;
+  }
+
+  @media (min-width: 1375px) {
+    right: 391px;
+    top: 298px;
+  }
+
+  @media (min-width: 1415px) {
+    right: 412px;
+    top: 282px;
+  }
+
+  @media (min-width: 1470px) {
+    right: 431px;
+    top: 275px;
+  }
+
+  @media (min-width: 1520px) {
+    right: 431px;
+    top: 275px;
+  }
+
+  @media (min-width: 1560px) {
+    right: 451px;
+    top: 258px;
+  }
+}
+
+.js-logo,
+.html-logo,
+.react-logo,
+.css-logo,
+.other-logo {
+  position: absolute;
+  top: 19px;
+  left: 10px;
+  width: 65px;
+  height: 75px;
+  transition: 2s;
+  animation: blick 4s linear infinite;
+  animation-delay: 4s;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.4, 1.4);
+    opacity: 1;
+    animation: none;
+  }
+}
+
+.css-logo {
+  width: 45px;
+  height: 60px;
+  top: 5px;
+  left: 180px;
+  animation-delay: 2s;
+
+  @media (min-width: "602px") {
+    left: 198px;
+  }
+}
+
+.react-logo {
+  width: 70px;
+  height: 85px;
+  top: 108px;
+  left: 122px;
+  animation: blickReact 4s linear infinite;
+  animation-delay: 2s;
+  opacity: 1;
+}
+
+.html-logo {
+  width: 67px;
+  height: 77px;
+  top: 185px;
+  left: 12px;
+  animation-delay: 2500ms;
+  border-radius: 3px;
+}
+
+.other-logo {
+  width: 44px;
+  height: 45px;
+  top: 182px;
+  left: 192px;
+  animation-delay: 1500ms;
+
+  @media (min-width: "602px") {
+    left: 228px;
+  }
+}
+
+.list-js-skill,
+.list-html-skill,
+.list-css-skill,
+.list-react-skill,
+.list-other-skill {
+  position: absolute;
+  top: 45px;
+  left: 10%;
+  animation: appearSkills 1s linear;
+
+  @media (min-width: 800px) {
+    left: 20%;
+  }
+}
+
+.list-html-skill {
+  top: 130px;
+  left: 37%;
+  width: 40px;
+
+  @media (min-width: 500px) {
+    left: 41%;
+  }
+
+  @media (min-width: 665px) {
+    left: 48%;
+    width: 180px;
+  }
+
+  @media (min-width: 1235px) {
+    left: 55%;
+  }
+}
+
+.list-react-skill {
+  top: 45px;
+  left: 37%;
+
+  @media (min-width: 500px) {
+    left: 41%;
+  }
+
+  @media (min-width: 665px) {
+    left: 48%;
+    width: 180px;
+  }
+
+  @media (min-width: 1235px) {
+    left: 55%;
+  }
+}
+
+.list-css-skill {
+  left: 64%;
+
+  @media (min-width: 500px) {
+    left: 70%;
+  }
+
+  @media (min-width: 680px) {
+    left: 78%;
+  }
+
+  @media (min-width: 800px) {
+    left: 74%;
+  }
+}
+
+.list-other-skill {
+  top: 132px;
+  left: 64%;
+
+  @media (min-width: 500px) {
+    left: 70%;
+  }
+
+  @media (min-width: 680px) {
+    left: 78%;
+  }
+
+  @media (min-width: 800px) {
+    left: 74%;
+  }
+}
+
+.list-item-js-skill,
+.list-item-html-skill,
+.list-item-css-skill,
+.list-item-react-skill,
+.list-item-other-skill {
+  color: $second__color;
+  font-size: $base__font-size;
+  font-family: $base__font-family;
+  letter-spacing: $letter-spacing;
+  padding-top: 8px;
+
+  &:hover {
+    color: $courses__fonts__color;
+  }
+}
+
+@keyframes appearSkillsStikers {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes appearSkills {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes blick {
+  0% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.3;
+  }
+}
+
+@keyframes blickReact {
+  0% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.7;
+  }
+}

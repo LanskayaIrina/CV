@@ -1,93 +1,93 @@
 {
   "skills": [
     {
-      "id": 0,
-      "skill": "JavaScript + ES6"
+      "js_skills": [
+        {
+          "id": 0,
+          "skill": "JavaScript"
+        },
+        {
+          "id": 1,
+          "skill": "ES6+"
+        }
+      ]
     },
     {
-      "id": 1,
-      "skill": "AJAX (XMLHttpRequest, Fetch, axios)"
+      "react_skills": [
+        {
+          "id": 2,
+          "skill": "React.js"
+        },
+        {
+          "id": 3,
+          "skill": "Redux"
+        }
+      ]
     },
     {
-      "id": 2,
-      "skill": "jQuery"
+      "html_skills": [
+        {
+          "id": 4,
+          "skill": "HTML"
+        },
+        {
+          "id": 5,
+          "skill": "Responsive design"
+        }
+      ]
     },
     {
-      "id": 3,
-      "skill": "React.js"
+      "css_skills": [
+        {
+          "id": 6,
+          "skill": "CSS, SCSS"
+        },
+        {
+          "id": 7,
+          "skill": "Bootstrap"
+        }
+      ]
     },
     {
-      "id": 4,
-      "skill": "Redux"
-    },
-    {
-      "id": 5,
-      "skill": "HTML"
-    },
-    {
-      "id": 6,
-      "skill": "CSS"
-    },
-    {
-      "id": 7,
-      "skill": "CSS"
-    },
-    {
-      "id": 8,
-      "skill": "Git "
+      "other_skills": [
+        {
+          "id": 8,
+          "skill": "Git "
+        },
+        {
+          "id": 9,
+          "skill": "Gulp/ Webpack"
+        },
+        {
+          "id": 10,
+          "skill": "Figma / Adobe Photoshop"
+        }
+      ]
     }
   ],
-  "other_skills": [
-    {
-      "id": 0,
-      "skill": "NodeJS(Koa)"
-    },
-    {
-      "id": 1,
-      "skill": "OOP"
-    },
-    {
-      "id": 2,
-      "skill": "MVC"
-    },
-    {
-      "id": 3,
-      "skill": "SQL (MySQL)"
-    },
-    {
-      "id": 4,
-      "skill": "SQL (MySQL)"
-    },
-    {
-      "id": 5,
-      "skill": "Gulp/ Webpack"
-    }
+  "languages": [
+    "English: Intermediate"
   ],
-  "languages": ["English: Pre-intermediate"],
   "courses": [
     {
-      "id": 0,
-      "course": "JS intensive course with the Kharkiv company (NDA)"
+      "title": "JS intensive course in Kharkiv company (NDA)",
+      "id": 0
     },
     {
-      "id": 1,
-      "course": "Private tutor, JavaScript advanced course"
+      "title": "Private tutor, JavaScript advanced course",
+      "id": 1
     },
     {
-      "id": 2,
-      "course": "Private tutor, JavaScript advanced course"
+      "title": "Private tutor, JavaScript basic course",
+      "id": 2
     },
     {
-      "id": 3,
-      "course": "Private tutor  - JavaScript basic course"
+      "title": "Computer courses “Basic” -  JavaScript basic course",
+      "id": 3
     },
     {
-      "id": 4,
-      "course": "Computer courses “Basic” -  JavaScript basic course"
-    },
-    {
-      "id": 5,
-      "course": "Computer courses “Basic”  - HTML5, CSS3 basic course"
+      "title": "Computer courses “Basic”  - HTML5, CSS3 basic course",
+      "id": 4
     }
   ]
 }

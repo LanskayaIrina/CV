@@ -68,10 +68,6 @@
   "languages": [
     "English: Intermediate"
   ],
-<<<<<<< HEAD
-=======
-  "languages": ["English: Intermediate"],
->>>>>>> fdb6d15e24ad671504a8f255b1a46a43ddb00c23
   "courses": [
     {
       "title": "JS intensive course in Kharkiv company (NDA)",

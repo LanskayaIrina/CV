@@ -1,5 +1,5 @@
-export const BASE_URL = '/';
-export const SKILLS = '/skills';
-export const COURSES = '/courses';
-export const INTERESTS = '/interests';
-export const CONTACTS = '/contacts';
+export const BASE_URL = '/cv';
+export const SKILLS = `${BASE_URL}/skills`;
+export const COURSES = `${BASE_URL}/courses`;
+export const INTERESTS = `${BASE_URL}/interests`;
+export const CONTACTS = `${BASE_URL}/contacts`;

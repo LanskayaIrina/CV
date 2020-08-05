@@ -84,7 +84,7 @@ export const Contacts = ({ match, history }) => {
                 <span className="contact-title">LinkedIn</span>
                 <span className="contact-info">linkedin.com/in/irina-lanskaya/</span>
               </ListItemLink>
-              <ListItemLink href="/CV_Irina_Lanskaya.pdf" target="_blank">
+              <ListItemLink href="CV_Irina_Lanskaya.pdf" target="_blank">
                 <span className="contact-title">Open CV (pdf)</span>
                 <span className="contact-info"></span>
               </ListItemLink>

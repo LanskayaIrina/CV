@@ -13,15 +13,15 @@ import photo from 'accets/4.png';
 import './styles.scss';
 
 export const Contacts = ({ match, history }) => {
-  const [isDialogEmail, setIsDialogEmail] = useState(false);
+  //const [isDialogEmail, setIsDialogEmail] = useState(false);
   const [isContacts, setIsContacts] = useState(true);
   const [isProjects, setIsProjects] = useState(false);
   const historyPushDown = '';
   const historyPushUp = INTERESTS;
 
-  const openDialogEmail = () => {
-    setIsDialogEmail(true);
-  };
+  // const openDialogEmail = () => {
+  //   setIsDialogEmail(true);
+  // };
 
   const showContacts = () => {
     setIsContacts(!isContacts);
@@ -41,7 +41,7 @@ export const Contacts = ({ match, history }) => {
     <div className="container" onWheel={(e) => handleEvent(e.deltaY, match, history, historyPushDown, historyPushUp)}>
       <Header titleName="Contacts" />
       <main>
-        {isDialogEmail && <FormDialog open={isDialogEmail} closeDialog={setIsDialogEmail} />}
+        {/* {isDialogEmail && <FormDialog open={isDialogEmail} closeDialog={setIsDialogEmail} />} */}
         <div className="img-container">
           <img className="main-img" src={photo} alt="ira" />
         </div>
@@ -72,7 +72,10 @@ export const Contacts = ({ match, history }) => {
                 <span className="contact-title">Phone</span>
                 <span className="contact-info">066 037 67 66</span>
               </ListItem>
-              <ListItem button onClick={() => openDialogEmail()}>
+              <ListItem
+                button
+                //  onClick={() => openDialogEmail()}
+              >
                 <span className="contact-title">Email</span>
                 <span className="contact-info">0376766@gmail.com</span>
               </ListItem>

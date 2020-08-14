@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/CV_Irina_Lanskaya/static/css/main.bd013663.chunk.css",
-    "main.js": "/CV_Irina_Lanskaya/static/js/main.3482a91f.chunk.js",
-    "main.js.map": "/CV_Irina_Lanskaya/static/js/main.3482a91f.chunk.js.map",
+    "main.js": "/CV_Irina_Lanskaya/static/js/main.4782158e.chunk.js",
+    "main.js.map": "/CV_Irina_Lanskaya/static/js/main.4782158e.chunk.js.map",
     "runtime-main.js": "/CV_Irina_Lanskaya/static/js/runtime-main.ae2a3055.js",
     "runtime-main.js.map": "/CV_Irina_Lanskaya/static/js/runtime-main.ae2a3055.js.map",
     "static/js/2.79614065.chunk.js": "/CV_Irina_Lanskaya/static/js/2.79614065.chunk.js",
     "static/js/2.79614065.chunk.js.map": "/CV_Irina_Lanskaya/static/js/2.79614065.chunk.js.map",
     "index.html": "/CV_Irina_Lanskaya/index.html",
-    "precache-manifest.d77377d2bc31dd70e4d0f5ae78006e6a.js": "/CV_Irina_Lanskaya/precache-manifest.d77377d2bc31dd70e4d0f5ae78006e6a.js",
+    "precache-manifest.9d6c8aac858c2e115840dfb0ddd946d7.js": "/CV_Irina_Lanskaya/precache-manifest.9d6c8aac858c2e115840dfb0ddd946d7.js",
     "service-worker.js": "/CV_Irina_Lanskaya/service-worker.js",
     "static/css/main.bd013663.chunk.css.map": "/CV_Irina_Lanskaya/static/css/main.bd013663.chunk.css.map",
     "static/js/2.79614065.chunk.js.LICENSE.txt": "/CV_Irina_Lanskaya/static/js/2.79614065.chunk.js.LICENSE.txt",
@@ -35,6 +35,6 @@
     "static/js/runtime-main.ae2a3055.js",
     "static/js/2.79614065.chunk.js",
     "static/css/main.bd013663.chunk.css",
-    "static/js/main.3482a91f.chunk.js"
+    "static/js/main.4782158e.chunk.js"
   ]
 }

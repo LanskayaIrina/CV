@@ -13,9 +13,6 @@ const mapDispatchToProps = {
 
 const App = ({ getCourses, getSkills }) => {
   useEffect(() => {
-    const clientHeight = document.documentElement.clientHeight;
-    const app = document.getElementById('app');
-    app.style.height = clientHeight + 'px';
     getCourses();
     getSkills();
 
@@ -23,11 +20,16 @@ const App = ({ getCourses, getSkills }) => {
   }, []);
 
   return (
-    <div className="App" id="app">
-      <BrowserRouter BrowserRouter>
-        <AppRouter />
-      </BrowserRouter>
-    </div>
+    <>
+      <div className="mobile-screen">
+        <h2>Sorry, this site doesn't work on mobile yet.</h2>
+      </div>
+      <div className="App">
+        <BrowserRouter BrowserRouter>
+          <AppRouter />
+        </BrowserRouter>
+      </div>
+    </>
   );
 };
 

@@ -28,19 +28,43 @@ main {
   object-position: center bottom;
 }
 
-.expand-more, .btn-expand-more {
+.btn-continue {
+  font-family: $title__font-family;
+  font-size: $base__font-size;
+  font-weight: bold;
+  letter-spacing: $letter-spacing;
+  color: $base__color;
+  padding: 10px;
+  background-color: $second__color;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  animation: appearBtnContinue 1s linear;
+  animation-delay: 3s;
+  animation-fill-mode: forwards;
+  opacity: 0;
   position: absolute;
-  bottom: 10px;
-  right: 10px;
+  bottom: 20px;
+  right: 40px;
   z-index: 55;
   cursor: pointer;
 }
 
-.btn-expand-less {
+.blurred-background {
   position: absolute;
-  top: 7px;
-  right: 10px;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  backdrop-filter: blur(3px);
   z-index: 55;
-  cursor: pointer;
+}
+
+@keyframes appearBtnContinue {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 

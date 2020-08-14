@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { object, arrayOf } from 'prop-types';
 
-import { ExpandMoreButton } from 'components/_shared/ExpandButton';
-import { handleEvent } from 'services/handleEvent';
+import { clickToContinue } from 'services/clickToContinue';
 import { COURSES } from 'constants/pathNames';
 import { Header } from 'components/header/Header';
 import { jsSkillsArr, reactSkillsArr, htmlSkillsArr, otherSkillsArr, cssSkillsArr } from 'constants/infoArries';
@@ -34,6 +33,7 @@ const initialCssSkillsListLayout = makeLayout(cssSkillsArr, 'css-skill');
 const initialOtherSkillsListLayout = makeLayout(otherSkillsArr, 'other-skill');
 
 export const Skills = ({ match, history, skills }) => {
+  const [isModal, setIsModal] = useState(true);
   const [htmlSkillList, setHtmlSkillList] = useState(false);
   const [cssSkillList, setCssSkillList] = useState(false);
   const [jsSkillList, setJsSkillList] = useState(false);
@@ -47,8 +47,7 @@ export const Skills = ({ match, history, skills }) => {
   const reactSkillsListLayout = react_skills ? makeLayout(react_skills.react_skills, 'react-skill') : null;
   const otherSkillsListLayout = other_skills ? makeLayout(other_skills.other_skills, 'other-skill') : null;
 
-  const historyPushDown = COURSES;
-  const historyPushUp = '';
+  const historyPush = COURSES;
 
   let isHtmlSkillList = null;
   let isCssSkillList = null;
@@ -96,8 +95,15 @@ export const Skills = ({ match, history, skills }) => {
     setOtherSkillList(!otherSkillList);
   };
 
+  const hideModal = () => {
+    setIsModal(false);
+  };
+
   return (
-    <div className="container" onWheel={(e) => handleEvent(e.deltaY, match, history, historyPushDown, historyPushUp)}>
+    <div
+      className="container"
+    // onWheel={(e) => handleEvent(e.deltaY, match, history, historyPushDown, historyPushUp)}
+    >
       {!reactSkillList && !isCssSkillList && !isOtherSkillList && <Header titleName="Skills" />}
       <main>
         <div className="img-container">
@@ -110,9 +116,21 @@ export const Skills = ({ match, history, skills }) => {
           <img src={cssImg} className="css-logo" onClick={showCssSkillList} alt="logo" />
           <img src={otherImg} className="other-logo" onClick={showOtherSkillListList} alt="logo" />
         </div>
-        <div className="btn-expand-more">
-          <ExpandMoreButton onClick={() => handleEvent(1.1, match, history, historyPushDown, historyPushUp)} />
-        </div>
+        {!isModal && (
+          <button className="btn-continue" onClick={() => clickToContinue(history, historyPush)}>
+            Continue
+          </button>
+        )}
+        {isModal && (
+          <div className="blurred-background">
+            <div className="modal-window">
+              <h2>All elements are clickable on this site.</h2>
+              <button className="btn-modal-ok" onClick={hideModal}>
+                Ok
+              </button>
+            </div>
+          </div>
+        )}
         {isJsSkillList}
         {isReactSkillList}
         {isHtmlSkillList}

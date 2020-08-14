@@ -6,9 +6,6 @@ import ListItem from '@material-ui/core/ListItem';
 
 // import { FormDialog } from '../formDialog';
 import { Header } from 'components/header/Header';
-import { ExpandLessButton } from 'components/_shared/ExpandButton';
-import { handleEvent } from 'services/handleEvent';
-import { INTERESTS } from 'constants/pathNames';
 import photo from 'accets/4.png';
 import './styles.scss';
 
@@ -16,8 +13,6 @@ export const Contacts = ({ match, history }) => {
   //const [isDialogEmail, setIsDialogEmail] = useState(false);
   const [isContacts, setIsContacts] = useState(true);
   const [isProjects, setIsProjects] = useState(false);
-  const historyPushDown = '';
-  const historyPushUp = INTERESTS;
 
   // const openDialogEmail = () => {
   //   setIsDialogEmail(true);
@@ -38,7 +33,7 @@ export const Contacts = ({ match, history }) => {
   };
 
   return (
-    <div className="container" onWheel={(e) => handleEvent(e.deltaY, match, history, historyPushDown, historyPushUp)}>
+    <div className="container">
       <Header titleName="Contacts" />
       <main>
         {/* {isDialogEmail && <FormDialog open={isDialogEmail} closeDialog={setIsDialogEmail} />} */}
@@ -70,14 +65,16 @@ export const Contacts = ({ match, history }) => {
             <List component="nav">
               <ListItem button>
                 <span className="contact-title">Phone</span>
-                <span className="contact-info">066 037 67 66</span>
+                <span className="contact-info contact-digits">066 037 67 66</span>
               </ListItem>
               <ListItem
                 button
-                //  onClick={() => openDialogEmail()}
+              //  onClick={() => openDialogEmail()}
               >
                 <span className="contact-title">Email</span>
-                <span className="contact-info">0376766@gmail.com</span>
+                <span className="contact-info">
+                  <span className="contact-digits">0376766</span>@gmail.com
+                </span>
               </ListItem>
               <ListItemLink href="https://github.com/LanskayaIrina" target="_blank">
                 <span className="contact-title">Git</span>
@@ -88,8 +85,8 @@ export const Contacts = ({ match, history }) => {
                 <span className="contact-info">linkedin.com/in/irina-lanskaya/</span>
               </ListItemLink>
               <ListItemLink href="CV_Irina_Lanskaya.pdf" target="_blank">
-                <span className="contact-title">Open CV (pdf)</span>
-                <span className="contact-info"></span>
+                <span className="contact-title">Open CV</span>
+                <span className="contact-info">(pdf)</span>
               </ListItemLink>
             </List>
           )}
@@ -101,9 +98,6 @@ export const Contacts = ({ match, history }) => {
               </ListItemLink>
             </List>
           )}
-        </div>
-        <div className="btn-expand-less">
-          <ExpandLessButton onClick={() => handleEvent(0, match, history, historyPushDown, historyPushUp)} />
         </div>
       </main>
     </div>

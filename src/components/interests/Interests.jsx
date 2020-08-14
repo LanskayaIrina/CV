@@ -1,10 +1,8 @@
 import React from 'react';
 
-import { ExpandMoreButton } from 'components/_shared/ExpandButton';
-import { ExpandLessButton } from 'components/_shared/ExpandButton';
 import { Header } from 'components/header/Header';
-import { handleEvent } from 'services/handleEvent';
-import { CONTACTS, COURSES } from 'constants/pathNames';
+import { clickToContinue } from 'services/clickToContinue';
+import { CONTACTS } from 'constants/pathNames';
 import photo from 'accets/Slide3.0.png';
 import photo2 from 'accets/Slide3.2.png';
 import jacketImg from 'accets/JacketFirst.png';
@@ -13,11 +11,10 @@ import dogGif from 'accets/SemenGif.gif';
 import './styles.scss';
 
 export const Interests = ({ match, history }) => {
-  const historyPushDown = CONTACTS;
-  const historyPushUp = COURSES;
+  const historyPush = CONTACTS;
 
   return (
-    <div className="container" onWheel={(e) => handleEvent(e.deltaY, match, history, historyPushDown, historyPushUp)}>
+    <div className="container">
       <Header />
       <main>
         <section className="third-slide-first-picture img-container">
@@ -35,12 +32,9 @@ export const Interests = ({ match, history }) => {
             <img className="gif-dog" src={dogGif} alt="dog" />
           </div>
         </section>
-        <div className="btn-expand-less">
-          <ExpandLessButton onClick={() => handleEvent(0, match, history, historyPushDown, historyPushUp)} />
-        </div>
-        <div className="btn-expand-more">
-          <ExpandMoreButton onClick={() => handleEvent(1.1, match, history, historyPushDown, historyPushUp)} />
-        </div>
+        <button className="btn-continue" onClick={() => clickToContinue(history, historyPush)}>
+          Continue
+        </button>
       </main>
     </div>
   );

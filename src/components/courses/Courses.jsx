@@ -1,12 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { TagCloud } from 'react-tagcloud';
 import { object, arrayOf } from 'prop-types';
 
-import { ExpandMoreButton } from 'components/_shared/ExpandButton';
-import { ExpandLessButton } from 'components/_shared/ExpandButton';
 import { Header } from 'components/header/Header';
-import { handleEvent } from 'services/handleEvent';
-import { INTERESTS, SKILLS } from 'constants/pathNames';
+import { clickToContinue } from 'services/clickToContinue';
+import { INTERESTS } from 'constants/pathNames';
 import { initialCoursesList } from 'constants/infoArries';
 import photo from 'accets/Slide2.0.png';
 import photo2 from 'accets/Slide2.1.png';
@@ -65,23 +63,19 @@ const makeCoursesListLayout = (arr) => {
 
 const initialCoursesLayout = makeCoursesListLayout(initialCoursesList);
 
-export const Courses = ({ match, history, courses, getCourses }) => {
+export const Courses = ({ match, history, courses }) => {
   const [isCourses, setIsCourses] = useState(false);
-  const [isTagCloud, setIsTagCloud] = useState(false);
-  const historyPushDown = INTERESTS;
-  const historyPushUp = SKILLS;
+  const historyPush = INTERESTS;
+
   let coursesLayout = makeCoursesListLayout(courses);
+
   const showCourses = () => {
-    setIsCourses(!isCourses);
+    setIsCourses(true);
   };
 
-  useEffect(() => {
-    setTimeout(() => {
-      setIsTagCloud(true);
-    }, 1000);
-
-    // eslint-disable-next-line
-  }, []);
+  const hideCourses = () => {
+    setIsCourses(false);
+  };
 
   const customRenderer = (tag, size, color) => (
     <span
@@ -101,7 +95,7 @@ export const Courses = ({ match, history, courses, getCourses }) => {
   );
 
   return (
-    <div className="container" onWheel={(e) => handleEvent(e.deltaY, match, history, historyPushDown, historyPushUp)}>
+    <div className="container">
       <Header />
       <main>
         <section className="second-slide-first-picture img-container">
@@ -120,18 +114,17 @@ export const Courses = ({ match, history, courses, getCourses }) => {
           <img className="main-img" src={photo2} alt="ira" />
         </section>
         <div className="tag-cloud-click" onClick={() => showCourses()} />
-        {isTagCloud && (
-          <div className="tag-cloud-container">
-            <TagCloud className="tag-cloud" tags={data} minSize={1} maxSize={5} renderer={customRenderer} />
+        <div className="tag-cloud-container">
+          <TagCloud className="tag-cloud" tags={data} minSize={1} maxSize={5} renderer={customRenderer} />
+        </div>
+        <button className="btn-continue" onClick={() => clickToContinue(history, historyPush)}>
+          Continue
+        </button>
+        {isCourses && (
+          <div className="blurred-background" onClick={hideCourses}>
+            <ul className="courses-list">{coursesLayout || initialCoursesLayout}</ul>
           </div>
         )}
-        <div className="btn-expand-less">
-          <ExpandLessButton onClick={() => handleEvent(0, match, history, historyPushDown, historyPushUp)} />
-        </div>
-        <div className="btn-expand-more">
-          <ExpandMoreButton onClick={() => handleEvent(1.1, match, history, historyPushDown, historyPushUp)} />
-        </div>
-        {isCourses && <ul className="courses-list">{coursesLayout || initialCoursesLayout}</ul>}
       </main>
     </div>
   );

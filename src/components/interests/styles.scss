@@ -3,13 +3,13 @@
 .third-slide-first-picture {
   height: 100%;
   width: 100%;
-  animation: disAppear3S1Img 8s linear;
 }
 
 .third-slide-second-picture {
   height: 100%;
   width: 100%;
-  animation: appear3S2Img 4.5s linear;
+  animation: appear3S2Img 2.5s linear;
+  z-index: 20;
 }
 
 .dog-img-container {
@@ -17,8 +17,8 @@
   left: 34%;
   height: 476px;
   width: 200px;
-  z-index: 56;
-  animation: dogUp 6s ease-in;
+  z-index: 16;
+  animation: dogUp 2s linear;
   animation-fill-mode: forwards;
 
   @media (min-width: 564px) {
@@ -61,12 +61,12 @@
     left: 43%;
     height: 475px;
     width: 228px;
-    animation: dogUp1270px 6s ease-in;
+    animation: dogUp1270px 2s linear;
     animation-fill-mode: forwards;
   }
 
   @media (min-width: 1330px) {
-    animation: dogUp1330px 6s ease-in;
+    animation: dogUp1330px 3s linear;
     animation-fill-mode: forwards;
   }
 
@@ -74,35 +74,35 @@
     left: 44%;
     height: 475px;
     width: 228px;
-    animation: dogUp1365px 6s ease-in;
+    animation: dogUp1365px 2s linear;
     animation-fill-mode: forwards;
   }
 
   @media (min-width: 1400px) {
     left: 44%;
     height: 540px;
-    animation: dogUp1400px 6s ease-in;
+    animation: dogUp1400px 2s linear;
     animation-fill-mode: forwards;
   }
 
   @media (min-width: 1450px) {
-    animation: dogUp1450px 6s ease-in;
+    animation: dogUp1450px 2s linear;
     animation-fill-mode: forwards;
   }
 
   @media (min-width: 1490px) {
-    animation: dogUp1490px 6s ease-in;
+    animation: dogUp1490px 2s linear;
     animation-fill-mode: forwards;
   }
 
   @media (min-width: 1520px) {
-    animation: dogUp1520px 6s ease-in;
+    animation: dogUp1520px 2s linear;
     animation-fill-mode: forwards;
   }
 
   @media (min-width: 1555px) {
     height: 576px;
-    animation: dogUp1555px 5s linear;
+    animation: dogUp1555px 2s linear;
     animation-fill-mode: forwards;
   }
 }
@@ -112,8 +112,8 @@
   left: -30%;
   height: 625px;
   width: 577px;
-  z-index: 18;
-  animation: jacketUp 6s ease-in;
+  z-index: 15;
+  animation: jacketUp 2s linear;
   animation-fill-mode: forwards;
 
   @media (min-width: 512px) {
@@ -241,7 +241,7 @@
   }
 
   @media (min-width: 1265px) {
-    animation: jacketUp1265px 6s ease-in;
+    animation: jacketUp1265px 2s linear;
     animation-fill-mode: forwards;
   }
 
@@ -258,7 +258,7 @@
   @media (min-width: 1355px) {
     left: 17%;
     width: 612px;
-    animation: jacketUp1355px 6s ease-in;
+    animation: jacketUp1355px 2s linear;
     animation-fill-mode: forwards;
   }
 
@@ -268,19 +268,19 @@
 
   @media (min-width: 1400px) {
     width: 631px;
-    animation: jacketUp1400px 6s ease-in;
+    animation: jacketUp1400px 2s linear;
     animation-fill-mode: forwards;
   }
 
   @media (min-width: 1430px) {
     width: 645px;
-    animation: jacketUp1430px 6s ease-in;
+    animation: jacketUp1430px 2s linear;
     animation-fill-mode: forwards;
   }
 
   @media (min-width: 1470px) {
     width: 662px;
-    animation: jacketUp1470px 6s ease-in;
+    animation: jacketUp1470px 2s linear;
     animation-fill-mode: forwards;
   }
 
@@ -294,7 +294,7 @@
 
   @media (min-width: 1550px) {
     width: 700px;
-    animation: jacketUp1550px 6s ease-in;
+    animation: jacketUp1550px 2s linear;
     animation-fill-mode: forwards;
   }
 }
@@ -452,108 +452,144 @@
 
 @keyframes jacketUp {
   0% {
-    top: 600px;
+    top: 750px;
   }
-  50% {
+  90% {
+    top: 164px;
+  }
+  100% {
     top: 164px;
   }
 }
 
 @keyframes jacketUp1265px {
   0% {
-    top: 600px;
+    top: 750px;
   }
-  50% {
+  90% {
+    top: 152px;
+  }
+  100% {
     top: 152px;
   }
 }
 
 @keyframes jacketUp1355px {
   0% {
-    top: 600px;
+    top: 750px;
   }
-  50% {
+  90% {
+    top: 140px;
+  }
+  100% {
     top: 140px;
   }
 }
 
 @keyframes jacketUp1400px {
   0% {
-    top: 600px;
+    top: 750px;
   }
-  50% {
+  90% {
+    top: 130px;
+  }
+  100% {
     top: 130px;
   }
 }
 
 @keyframes jacketUp1430px {
   0% {
-    top: 600px;
+    top: 750px;
   }
-  50% {
+  90% {
+    top: 120px;
+  } 
+   100% {
     top: 120px;
   }
 }
 
 @keyframes jacketUp1470px {
   0% {
-    top: 600px;
+    top: 750px;
   }
-  50% {
+  90% {
+    top: 112px;
+  }
+  100% {
     top: 112px;
   }
 }
 
 @keyframes jacketUp1550px {
   0% {
-    top: 600px;
+    top: 750px;
   }
-  50% {
+  90% {
+    top: 115px;
+  }
+  100% {
     top: 115px;
   }
 }
 
 @keyframes dogUp {
   0% {
-    top: 500px;
+    top: 800px;
   }
-  50% {
+  80% {
+    top: 230px;
+  }
+  99% {
     top: 230px;
   }
 }
 
 @keyframes dogUp1270px {
   0% {
-    top: 500px;
+    top: 800px;
   }
-  50% {
+  80% {
+    top: 205px;
+  }
+  99% {
     top: 205px;
   }
 }
 
 @keyframes dogUp1330px {
   0% {
-    top: 500px;
+    top: 800px;
   }
-  50% {
+  80% {
+    top: 200px;
+  }
+  99% {
     top: 200px;
   }
 }
 
 @keyframes dogUp1365px {
   0% {
-    top: 500px;
+    top: 800px;
   }
-  50% {
+  80% {
+    top: 180px;
+  }
+  99% {
     top: 180px;
   }
 }
 
 @keyframes dogUp1400px {
   0% {
-    top: 500px;
+    top: 800px;
   }
-  50% {
+  80% {
+    top: 157px;
+  }
+  99% {
     top: 157px;
   }
 }
@@ -562,7 +598,10 @@
   0% {
     top: 800px;
   }
-  50% {
+  80% {
+    top: 147px;
+  }
+  99% {
     top: 147px;
   }
 }
@@ -571,7 +610,10 @@
   0% {
     top: 800px;
   }
-  50% {
+  80% {
+    top: 137px;
+  }
+  99% {
     top: 137px;
   }
 }
@@ -580,7 +622,10 @@
   0% {
     top: 800px;
   }
-  50% {
+  80% {
+    top: 100px;
+  }
+  99% {
     top: 100px;
   }
 }
@@ -589,17 +634,11 @@
   0% {
     top: 800px;
   }
-  50% {
+  80% {
     top: 90px;
   }
-}
-
-@keyframes disAppear3S1Img {
   99% {
-    opacity: 1;
-  }
-  100% {
-    opacity: .8;
+    top: 90px;
   }
 }
 
@@ -607,7 +646,7 @@
   0% {
     opacity: 0;
   }
-  80% {
+  70% {
     opacity: 0;
   }
   100% {

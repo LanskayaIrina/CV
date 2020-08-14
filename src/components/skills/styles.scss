@@ -306,6 +306,28 @@
   }
 }
 
+.modal-window {
+  display: flex;
+  flex-direction: column;
+  letter-spacing: 0.3rem;
+  position: absolute;
+  font-size: $base__font-size;
+  font-family: $base__font-family;
+  top: 335px;
+  width: 61%;
+  right: 20%;
+  color: $courses__fonts__color;
+  background-blend-mode: difference;
+  z-index: 30;
+  padding: 32px;
+  background-color: rgba($color: #000000, $alpha: 0.9);
+}
+
+.btn-modal-ok {
+align-self: flex-end;
+padding: 10px;
+}
+
 @keyframes appearSkillsStikers {
   0% {
     opacity: 0.5;

@@ -16,6 +16,11 @@ const App = ({ getCourses, getSkills }) => {
     getCourses();
     getSkills();
 
+    document.getElementById('app').style.height = document.documentElement.clientHeight;
+    const clientHeight = document.documentElement.clientHeight;
+    const app = document.getElementById('app');
+    app.style.height = clientHeight + 'px';
+
     // eslint-disable-next-line
   }, []);
 
@@ -24,7 +29,7 @@ const App = ({ getCourses, getSkills }) => {
       <div className="mobile-screen">
         <h2>Sorry, this site doesn't work on mobile yet.</h2>
       </div>
-      <div className="App">
+      <div className="App" id="app">
         <BrowserRouter BrowserRouter>
           <AppRouter />
         </BrowserRouter>

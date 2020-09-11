@@ -17,7 +17,7 @@ const App = ({ getCourses, getSkills }) => {
     getSkills();
 
     document.getElementById('app').style.height = document.documentElement.clientHeight;
-    const clientHeight = document.documentElement.clientHeight;
+    const clientHeight = Math.max(document.documentElement.clientHeight, document.documentElement.scrollHeight);
     const app = document.getElementById('app');
     app.style.height = clientHeight + 'px';
 

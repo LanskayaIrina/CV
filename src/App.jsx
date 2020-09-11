@@ -19,6 +19,7 @@ const App = ({ getCourses, getSkills }) => {
     document.getElementById('app').style.height = document.documentElement.clientHeight;
     const clientHeight = Math.max(700, document.documentElement.clientHeight);
     const app = document.getElementById('app');
+
     app.style.height = clientHeight + 'px';
 
     // eslint-disable-next-line
